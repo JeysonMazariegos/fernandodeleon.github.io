@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROYECTO-PRECALCULO</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+
+
+</head>
+
+<body>
+    <nav class="nav-extended teal darken-3">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo" style="margin-left: 15px;">Pro-Pre</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#test1">Varias gráficas</a></li>
+                <li class="tab"><a href="#test4">Circulares</a></li>
+                <li class="tab"><a href="#test5">Límites</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="test1" class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="card">
+                            <div class="card-image">
+                                <h5 style="color: #ff9800;">Aquí puede graficar: Constantes, lineales, cuadráticas y cúbicas.</h5>
+
+                                <span id="lineal" class="graph"></span>
+                            </div>
+                            <div class="card-content">
+                                <div class="row">
+                                    <form id="formLineal">
+                                        <div class="row">
+                                            <div class="input-field col s2">
+                                                <h5>f(x)=</h5>
+                                            </div>
+                                            <div class="input-field col s8">
+                                                <input id="inputLineal" type="text" />
+                                            </div>
+                                            <div class="input-field col s2">
+                                                <button class="btn waves-effect waves-light" type="submit">
+                                                    >
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="test4" class="col s12">
+        <div class="row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="card">
+                            <div class="card-image">
+                                <h5 style="color: #ff9800;">Configuración de su ecuación</h5>
+                                <span id="circular" class="graph"></span>
+                            </div>
+                            <div class="card-content">
+                                <div class="row">
+                                    <form id="formCircular">
+                                        <div class="row">
+                                            <div class="input-field col s2">
+                                                <h5>f(x)=</h5>
+                                            </div>
+                                            <div class="input-field col s8">
+                                                <input id="inputCircular" type="text" />
+                                            </div>
+                                            <div class="input-field col s2">
+                                                <button class="btn waves-effect waves-light" type="submit">
+                                                    >
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="test5" class="col s12">
+        <div class="row">
+            <div class="col s6">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-image">
+                                <h5 style="color: #ff9800;">Configuración de su ecuación</h5>
+                                <span id="multiple" class="graph"></span>
+                            </div>
+                            <div class="card-content">
+                                <form id="formLimites">
+                                    <div class="row">
+
+                                        <div class="row">
+                                            <div class="input-field col s2">
+                                                <h5>f(x)=</h5>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <input id="inputLimites" type="text" />
+                                            </div>
+                                            <div class="input-field col s2">
+                                                <input id="inputLimite1" type="text" />
+                                            </div>
+                                            <div class="input-field col s2">
+                                                <input id="inputLimite2" type="text" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s10">
+                                            <select id="inputColorLimite">
+                                                <option value="" disabled selected>Escoja color</option>
+                                                <option value="blue">blue</option>
+                                                <option value="red">red</option>
+                                                <option value="green">green</option>
+                                                <option value="orange">orange</option>
+                                                <option value="black">black</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="input-field col s2">
+                                            <button class="btn waves-effect waves-light" type="submit">
+                                                >
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s6">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <h5>Lista de ecuaciones</h5>
+                                <div class="row">
+
+                                    <table class="centered striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Función</th>
+                                                <th>Límite</th>
+                                                <th>Color</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody id="tableLimites">
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('select').material_select();
+    });
+</script>
+
+<script src="https://unpkg.com/d3@3/d3.min.js"></script>
+<script src="https://unpkg.com/function-plot@1/dist/function-plot.js"></script>
+
+<script src="./varias.js"></script>
+<script src="./circulares.js"></script>
+<script src="./limites.js"></script>
+
+</html>
